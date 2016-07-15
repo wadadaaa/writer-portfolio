@@ -1,0 +1,51 @@
+{% load wagtailimages_tags wagtailembeds_tags wagtailcore_tags %}
+
+        <!-- *** ABOUT ***
+_________________________________________________________ -->
+        <div class="section" id="about">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <h2 class="title" data-animate="fadeInDown">Обо мне</h2>
+                    </div>
+
+                    <div class="col-sm-12">
+
+                        <div class="row">
+
+                            <div class="col-sm-6 text-left" data-animate="fadeInUp">
+
+                                <p>преподаю английский, а по совместительству журналист и писатель</p>
+
+                            </div>
+
+                            <div class="col-sm-6" data-animate="fadeInUp">
+                                {% for skill_item in skill_items %}
+
+                                <div class="skill-item">
+                                    <div class="progress-title">
+                                        {{ skill_item.skill_name }}
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-skill1" role="progressbar" aria-valuenow="{{ skill_item.percent }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ skill_item.percent }}%;">
+                                            <span class="sr-only"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 mt-big" data-animate="bounceIn">
+{#                        <img src="{% static 'original_images/about.png' %}" class="image img-circle img-responsive" alt=Tanya Levinson>#}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#about -->
+
+        <!-- *** ABOUT END *** -->

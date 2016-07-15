@@ -1,0 +1,76 @@
+{% load wagtailimages_tags wagtailembeds_tags wagtailcore_tags %}
+        <div class="section" id="references">
+            <div class="container">
+                <div class="col-sm-12">
+
+                    <div class="mb20">
+                        <h2 class="title" data-animate="fadeInUp">Мои работы</h2>
+
+                        <p class="lead" data-animate="fadeInUp"> Выполненные работы.</p>
+                    </div>
+
+                    <ul id="filter" data-animate="fadeInUp">
+                        <li class="active"><a href="#" data-filter="all">Все</a>
+                        </li>
+                        <li><a href="#" data-filter="webdesign">Переводы</a>
+                        </li>
+                        <li><a href="#" data-filter="seo">Статьи</a>
+                        </li>
+                        <li><a href="#" data-filter="marketing">Маркетинг</a>
+                        </li>
+                        <li><a href="#" data-filter="other">Другое</a>
+                        </li>
+                    </ul>
+
+                    <div id="detail">
+
+                        <span class="close">&times;</span>
+
+                        <div id="detail-slider"></div>
+
+                        <div class="text-center">
+                            <h1 id="detail-title">&nbsp;</h1>
+                        </div>
+
+                        <div id="detail-content"></div>
+
+                    </div>
+                    <!-- Reference detail -->
+
+                    <div id="references-masonry" data-animate="fadeInUp">
+
+                        <div class="reference-item" data-category="webdesign">
+                            {% for work_item in work_items %}
+                            <div class="reference">
+                                <a href="#">
+{#                                    <img src="img/portfolio-1.jpg" class="img-responsive" alt="" />#}
+                                    {% image work_item.project_image width-130 as project_image %}
+                                    <img src="{{ project_image.url }}" class="img-responsive">
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">{{ work_item.name }}</h3>
+                                        <p>{{ work_item.general_description|richtext }}</p>
+                                    </div>
+                                </a>
+                                {% image work_item.project_image width-250 as project_image %}
+                                <div class="sr-only reference-description" data-images="{{ project_image.url }}">
+
+                                    <p>{{ work_item.description|richtext }}</p>
+
+{#                                    <p class="buttons">#}
+{#                                        <a class="btn btn-primary" href="javascript:void(0);"><i class="fa fa-globe"></i> Visit website</a>#}
+{#                                        <a class="btn btn-primary" href="javascript:void(0);"><i class="fa fa-download"></i> Download case study</a>#}
+{#                                    </p>#}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <!-- /#references-masonry -->
+
+                </div>
+                <!-- /.12 -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.section -->

@@ -1,0 +1,171 @@
+{% load wagtailimages_tags wagtailembeds_tags wagtailcore_tags %}
+
+        <!-- *** TESTIMONIALS ***
+_________________________________________________________ -->
+
+        <div class="section text-gray" id="testimonials" data-animate="fadeInUp">
+
+            <div class="container">
+                <div class="col-md-12">
+
+                    <div class="mb20">
+                        <h2 class="title" data-animate="fadeInUp">Мои клиенты говорят<br /><span>обо мне</span></h2>
+
+                        <p class="lead text-center" data-animate="fadeInUp">Я очень горда слышать отзывы.</p>
+                    </div>
+
+                    <ul class="owl-carousel testimonials same-height-row" data-animate="fadeInUp">
+                        {% for testimonial_item in testimonial_items %}
+                        <li class="item">
+                            <div class="testimonial same-height-always">
+                                <div class="text">
+                                    <p>{{ testimonial_item.general_description|richtext }}</p>
+                                </div>
+                                <div class="bottom">
+                                    <div class="icon"><i class="fa fa-quote-left"></i>
+                                    </div>
+                                    <div class="name-picture">
+                                        {% image testimonial_item.avatar original as avatar %}
+                                        <img src="{{ avatar.url }}">
+                                        <h5>{{ testimonial_item.name }}</h5>
+                                        <p>{{ testimonial_item.position }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+{#                        <li class="item">#}
+{#                            <div class="testimonial same-height-always">#}
+{#                                <div class="text">#}
+{#                                    <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?#}
+{#                                        " he thought. It wasn't a dream.</p>#}
+{#                                </div>#}
+{#                                <div class="bottom">#}
+{#                                    <div class="icon"><i class="fa fa-quote-left"></i>#}
+{#                                    </div>#}
+{#                                    <div class="name-picture">#}
+{#                                        <img class="" alt="" src="img/person-2.jpg">#}
+{#                                        <h5>John McIntyre</h5>#}
+{#                                        <p>CEO, TransTech</p>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </li>#}
+{#                        <li class="item">#}
+{#                            <div class="testimonial same-height-always">#}
+{#                                <div class="text">#}
+{#                                    <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>#}
+{##}
+{#                                    <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded#}
+{#                                        frame.</p>#}
+{#                                </div>#}
+{#                                <div class="bottom">#}
+{#                                    <div class="icon"><i class="fa fa-quote-left"></i>#}
+{#                                    </div>#}
+{#                                    <div class="name-picture">#}
+{#                                        <img class="" alt="" src="img/person-3.jpg">#}
+{#                                        <h5>John McIntyre</h5>#}
+{#                                        <p>CEO, TransTech</p>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </li>#}
+{#                        <li class="item">#}
+{#                            <div class="testimonial same-height-always">#}
+{#                                <div class="text">#}
+{#                                    <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.#}
+{#                                        Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>#}
+{#                                </div>#}
+{##}
+{#                                <div class="bottom">#}
+{#                                    <div class="icon"><i class="fa fa-quote-left"></i>#}
+{#                                    </div>#}
+{#                                    <div class="name-picture">#}
+{#                                        <img class="" alt="" src="img/person-4.jpg">#}
+{#                                        <h5>John McIntyre</h5>#}
+{#                                        <p>CEO, TransTech</p>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </li>#}
+{#                        <li class="item">#}
+{#                            <div class="testimonial same-height-always">#}
+{#                                <div class="text">#}
+{#                                    <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.#}
+{#                                        Drops of rain could be heard hitting the pane, which made him feel quite sad. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite#}
+{#                                        sad.</p>#}
+{#                                </div>#}
+{##}
+{#                                <div class="bottom">#}
+{#                                    <div class="icon"><i class="fa fa-quote-left"></i>#}
+{#                                    </div>#}
+{#                                    <div class="name-picture">#}
+{#                                        <img class="" alt="" src="img/person-4.jpg">#}
+{#                                        <h5>John McIntyre</h5>#}
+{#                                        <p>CEO, TransTech</p>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </li>#}
+                    </ul>
+                    <!-- /.owl-carousel -->
+                </div>
+                <!-- /.12 -->
+            </div>
+            <!-- /.container -->
+
+        </div>
+        <!-- /.section -->
+
+        <!-- *** TESTIMONIALS END *** -->
+
+        <!-- *** SHOWCASE ***
+_________________________________________________________ -->
+        <div class="section text-parallax parallax-image1" id="services">
+            <div class="container">
+                <div class="row showcase">
+                    <div class="col-md-3 col-sm-6" data-animate="fadeInUp">
+                        <div class="item">
+                            <div class="icon"><i class="fa fa-align-justify"></i>
+                            </div>
+                            <h4><span class="counter">120</span><br>
+
+			Websites</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-animate="fadeInUp">
+                        <div class="item">
+                            <div class="icon"><i class="fa fa-users"></i>
+                            </div>
+                            <h4><span class="counter">50</span><br>
+
+			Satisfied Clients</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-animate="fadeInUp">
+                        <div class="item">
+                            <div class="icon"><i class="fa fa-copy"></i>
+                            </div>
+                            <h4><span class="counter">320</span><br>
+
+			Projects</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-animate="fadeInUp">
+                        <div class="item">
+                            <div class="icon"><i class="fa fa-font"></i>
+                            </div>
+                            <h4><span class="counter">333</span><br>
+
+			Magazines and Brochures</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+
+            <div class="dark-mask"></div>
+
+        </div>
+        <!-- /.section -->

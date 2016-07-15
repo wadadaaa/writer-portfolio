@@ -1,0 +1,31 @@
+{% load wagtailimages_tags wagtailembeds_tags wagtailcore_tags %}
+
+        <!-- *** CUSTOMERS ***
+_________________________________________________________ -->
+
+        <div class="section text-gray" id="customers">
+            <div class="container">
+                <div class="col-md-12">
+
+
+                    <div class="row">
+                        {% for client_item in client_items %}
+                        <div class="col-sm-4 col-md-2  col-xs-6">
+                            <div class="customer">
+                                {% image client_item.client_logo original as logo %}
+                                <img class="img-responsive" src="{{ logo.url }}" title="{{ client_item.name }}" data-placement="bottom" data-toggle="tooltip" alt="">
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <!-- /.row -->
+
+
+                </div>
+                <!-- /.12 -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.section -->
+
+        <!-- *** CUSTOMERS END *** -->

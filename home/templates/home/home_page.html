@@ -1,0 +1,15 @@
+{% extends "home/base.html" %}
+
+
+
+{% block content %}
+    {% include "home/includes/intro.html" with intro_items=self.intro_items.all only %}
+{#    {% include "home/includes/video.html" with video_items=self.video_items.all only %}#}
+    {% include "home/includes/about.html" with skill_items=self.skill_items.all only %}
+    {% include "home/includes/service.html" with service_items=self.service_items.all only %}
+    {% include "home/includes/testimonial.html" with testimonial_items=self.testimonial_items.all only %}
+    {% include "home/includes/work.html" with work_items=self.work_items.all only %}
+    {% include "home/includes/client.html" with client_items=self.client_items.all only %}
+    {% include "home/includes/contacts.html" %}
+
+{% endblock %}
