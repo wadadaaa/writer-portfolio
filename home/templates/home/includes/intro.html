@@ -43,8 +43,6 @@ _________________________________________________________ -->
     <!-- *** NAVBAR END *** -->
 
 
-    <div id="all">
-
 
         <!-- *** INTRO IMAGE ***
 _________________________________________________________ -->
@@ -54,9 +52,10 @@ _________________________________________________________ -->
                     <div class="row">
                         <div class="carousel-caption">
                             {% for intro_item in intro_items %}
+                                {% image intro_item.hero original as hero %}
+                                <img src="{{ hero.url }}" class="item" id="intro">
                                 {% if intro_item.logo %}
                             <div data-animate="fadeInDown" class="logo">
-{#                                <img src="img/logo-big.png" alt="logo" width="130">#}
                             {% image intro_item.logo width-130 as logo_image %}
                                 <img src="{{ logo_image.url }}" class="img-responsive">
                             </div>
