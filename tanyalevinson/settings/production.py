@@ -19,8 +19,8 @@ AWS_QUERYSTRING_AUTH = False
 
 project = 'tanyalevinson'
 
-DEFAULT_FILE_STORAGE = '%s.s3.Media' % project
-STATICFILES_STORAGE = '%s.s3.CachedS3BotoStorage' % project
+DEFAULT_FILE_STORAGE = 'tanyalevinson.s3.Media'
+STATICFILES_STORAGE = 'tanyalevinson.s3.CachedS3BotoStorage'
 MEDIA = 'media'
 MEDIA_ROOT = MEDIA
 
@@ -30,5 +30,5 @@ STATIC_ROOT = STATIC
 COMPRESS_ENABLED = True
 COMPRESS_URL = STATIC_URL
 COMPRESS_ROOT = STATIC_ROOT
-COMPRESS_STORAGE = '%s.s3.Static' % project
+COMPRESS_STORAGE = 'tanyalevinson.s3.Static'
 COMPRESS_OFFLINE = False
