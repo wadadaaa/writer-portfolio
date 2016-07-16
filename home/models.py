@@ -23,10 +23,8 @@ from wagtail.wagtailimages.blocks import ImageChooserBlock
 from wagtail.wagtaildocs.blocks import DocumentChooserBlock
 
 
-
 from modelcluster.fields import ParentalKey
 from taggit.models import TaggedItemBase
-
 
 
 class ImageFormatChoiceBlock(FieldBlock):
@@ -101,7 +99,6 @@ class IntroItem(LinkFields):
         on_delete=models.SET_NULL,
         related_name='+'
     )
-    embed_url = models.URLField("Embed URL", blank=True)
     intro_h1 = models.CharField(max_length=255, blank=True)
     intro_h2 = models.CharField(max_length=255, blank=True)
 
@@ -109,10 +106,8 @@ class IntroItem(LinkFields):
         ImageChooserPanel('logo'),
         ImageChooserPanel('label'),
         ImageChooserPanel('hero'),
-        FieldPanel('embed_url'),
         FieldPanel('intro_h1'),
         FieldPanel('intro_h2'),
-        MultiFieldPanel(LinkFields.panels, "Link"),
     ]
 
     class Meta:
@@ -122,12 +117,10 @@ class IntroItem(LinkFields):
 # Skills items
 
 class SkillItem(LinkFields):
-    header = models.CharField(max_length=255, blank=True)
     skill_name = models.CharField(max_length=255, blank=True)
     percent = models.PositiveSmallIntegerField(blank=True)
 
     panels = [
-        FieldPanel('header'),
         FieldPanel('skill_name'),
         FieldPanel('percent'),
         MultiFieldPanel(LinkFields.panels, "Link"),
