@@ -1,1 +1,1 @@
-web: gunicorn tanya_levinson.wsgi --log-file -
+web: gunicorn tanyalevinson.wsgi --log-file -

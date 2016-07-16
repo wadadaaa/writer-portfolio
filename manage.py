@@ -5,7 +5,7 @@ import sys
 
 if __name__ == "__main__":
 
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "tanya_levinson.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "tanyalevinson.settings")
 
     from django.core.management import execute_from_command_line
 

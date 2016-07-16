@@ -22,7 +22,7 @@
 
     <!-- Bootstrap and Font Awesome css -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.0/cerulean/bootstrap.min.css" rel="stylesheet">
     {% compress css %}
     <!-- Theme stylesheet -->
     <link href="{% static "css/style.default.css" %}" rel="stylesheet" id="theme-stylesheet">
@@ -39,6 +39,15 @@
     <!-- CSS Animations -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 
+    <!-- Mordernizr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+    <!-- Responsivity for older IE -->
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
 
     <!-- Favicon -->
 {#    <link rel="shortcut icon" href="favicon.png">#}
@@ -53,16 +62,9 @@
 
 
      <!-- #### JAVASCRIPT FILES ### -->
-    <!-- Mordernizr -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
-    <!-- Responsivity for older IE -->
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
     <!-- js base -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <!-- for demo purpose -->
