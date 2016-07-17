@@ -52,16 +52,15 @@ _________________________________________________________ -->
                     <div class="row">
                         <div class="carousel-caption">
                             {% for intro_item in intro_items %}
-                                {% image intro_item.hero original as hero %}
-                                <img src="{{ hero.url }}" class="item" id="intro">
-                                {% if intro_item.logo %}
+{#                            {% image intro_item.hero original as hero %}#}
+{#                                <img src="{{ hero.url }}" class="item" id="intro">#}
+                            {% if intro_item.logo %}
                             <div data-animate="fadeInDown" class="logo">
-                            {% image intro_item.logo width-130 as logo_image %}
-                                <img src="{{ logo_image.url }}" class="img-responsive">
+                                <img src="{{ logo_image.url }}" alt="logo" width="130">
                             </div>
-                                {% endif %}
-                            <h1>{{ intro_item.intro_h1 }}</h1>
-                            <h2>{{ intro_item.intro_h2 }}</h2>
+                            {% endif %}
+                            <h1 data-animate="fadeInDown">{{ intro_item.intro_h1 }}</h1>
+                            <h2 data-animate="slideInUp">{{ intro_item.intro_h2 }}</h2>
                             {% endfor %}
                         </div>
                     </div>

@@ -39,12 +39,12 @@
 
                     <div id="references-masonry" data-animate="fadeInUp">
 
-                        <div class="reference-item" data-category="webdesign">
                             {% for work_item in work_items %}
+                       <div class="reference-item" data-category="{{ work_item.tag }}">
+
                             <div class="reference">
                                 <a href="#">
-{#                                    <img src="img/portfolio-1.jpg" class="img-responsive" alt="" />#}
-                                    {% image work_item.project_image width-130 as project_image %}
+                                    {% image work_item.project_image width-255 as project_image %}
                                     <img src="{{ project_image.url }}" class="img-responsive">
 
                                     <div class="overlay">
@@ -63,8 +63,8 @@
 {#                                    </p>#}
                                 </div>
                             </div>
-                            {% endfor %}
                         </div>
+                        {% endfor %}
                     </div>
                     <!-- /#references-masonry -->
 
